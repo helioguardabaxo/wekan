@@ -86,7 +86,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -282,7 +282,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential g++ make python3 curl wget zip unzip
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -416,7 +416,7 @@ jobs:
           ref: refs/tags/v${{ needs.prepare.outputs.version }}
           path: src
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -516,7 +516,7 @@ jobs:
     env:
       VERSION: ${{ needs.prepare.outputs.version }}
     steps:
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
 
